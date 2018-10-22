@@ -1,18 +1,13 @@
 <template>
   <section class="recipes">
     <Recipe
-      thumbnail="https://static.boredpanda.com/blog/wp-content/uuuploads/food-art/food-art-38.jpg"
-      title="Hot Dog"
-      id="1"
-      previewText="Eat~"
+      v-for ="recipe in recipes"
+      :key="recipe.id"
+      :thumbnail="recipe.thumbnail"
+      :title="recipe.title"
+      :previewText="recipe.previewText"
+      :id="recipe.id"
     />
-    <Recipe
-      thumbnail="https://static.boredpanda.com/blog/wp-content/uuuploads/food-art/food-art-29.jpg"
-      title="Sleeping Rice Bear"
-      id="2"
-      previewText="Eat Good Sleep Good~"
-    />
-
   </section>
 </template>
 
@@ -29,9 +24,15 @@ export default{
          recipes:[
            {
              id:"1",
-             title:"Sleeping Rice Bear",
-             previewText:"Eat Good Sleep Good~",
+             title:"Panda",
+             previewText:"Eat~",
              thumbnail:"https://static.boredpanda.com/blog/wp-content/uuuploads/food-art/food-art-18.jpg"
+           },
+           {
+             thumbnail:"https://static.boredpanda.com/blog/wp-content/uuuploads/food-art/food-art-29.jpg",
+             title:"Sleeping Rice Bear",
+             id:"2",
+             previewText:"Eat Good Sleep Good~"
            }
          ]
        })
